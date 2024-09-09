@@ -1,0 +1,33 @@
+.book {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+.form-add {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+
+    /* color: #67615c;
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    height: 650px;
+    width: 30rem;
+    background-color: rgb(255, 255, 255);
+    padding-left: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in; */
+}
+
+.form-toggle {
+    display: none;
+}

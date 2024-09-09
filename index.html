@@ -8,11 +8,41 @@
     </head>
 
     <body>
-        <div>
-            <ul>
-                <li>Book 1</li>
-            </ul>
+        <h1>My Library</h1>
+
+        <div class="Library-Cont">
+            <div class="book">
+                <div class="title">The Hobbit</div>
+                <div class="author">J.R.R. Tolkien</div>
+                <div class="page">Page Count: 295</div>
+                <div>
+                    <input type="checkbox" id="read" name="read" checked>
+                    <label for="read">Read Status</label>
+                  </div>
+            </div>
         </div>
+
+        <button id="add-book">Add Book</button>
+
+        <div class="form-add">
+            <form class="form-toggle" action = "#">
+                <label for="book-title">Book Title</label>
+                <input type="text" id="book-title"/>
+
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author"/>
+
+                <label for="book-pages">Pages</label>
+                <input type="number" id="book-pages"/>
+
+                <label for="book-status">Pages</label>
+                <input type="checkbox" id="book-status"/>
+            </form>
+        </div>
+
+        <div>Total Books: 0</div>
+
+
         <script src="scripts.js"></script>
     </body>
 </html>

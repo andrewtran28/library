@@ -1,13 +1,12 @@
 const myLibrary = [];
+const btn_addBook = document.querySelector("#add-book");
+const addBookForm = document.querySelector(".form-toggle");
 
-function  Book(title, author, pages, read) {
-//constructor that takes user's input and stores the new book objects in to an array.
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this. read = read;
-
-
 
     this.info = function() {
         read ? read = "has been read" : read = "has not been read yet";
@@ -18,9 +17,21 @@ function  Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-    //do stuff here
+    // const title_input = document.querySelector("#password");
+    // const author_input = document.querySelector("#confirm-password");
+    // const pages_input = document.querySelector(".message");
+    // const read_input = document.querySelector("form");
+
+    // form.addEventListener("submit", e => {
+    //     const pwd = document.querySelector('#password').value;
+    //     const confirm_pwd = document.querySelector('#confirm-password').value;
+    //     const pwd_msg = document.querySelector('.pwd-msg'); 
+    // });
 }
 
-const hobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, 0);
+btn_addBook.addEventListener("click", () => {
+    addBookForm.classList.toggle("form-toggle");
+});
 
+const hobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, 0);
 hobbit.info();
