@@ -36,6 +36,15 @@ h1 {
     margin: 10px;
 }
 
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #082f3e;
+    position: absolute;
+    bottom: 0;
+}
+
 .library-cont {
     display: grid;
     grid-template-columns: repeat(auto-fill, clamp(500px, 33%, 50%));
