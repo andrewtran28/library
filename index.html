@@ -8,42 +8,35 @@
     </head>
 
     <body>
-        <h1>My Library</h1>
+        <div class="layout">
+            <h1>My Library</h1>
 
-        <div class="library-cont">
-            <!-- <div class="book">
-                <button class="remove">x</button>
-                <div class="title">The Hobbit</div>
-                <div class="author">J.R.R. Tolkien</div>
-                <div class="page">Page Count: 295</div>
-                <div>
-                    Read Status: 
-                    <input type="checkbox" id="read" name="read" checked>
-                  </div>
-            </div> -->
+            <button id="add-book">Register New Book</button>
+            <div class="total">Total Books: </div>
+    
+            <div class="library-cont"></div>
+    
+            <div class="form-add">
+                <dialog>
+                    <button autofocus class="close">Close</button>
+                    <form method="dialog">
+                        <label for="book-title">Book Title</label>
+                        <input type="text" id="book-title" required/>
+                        <br>    
+                        <label for="book-author">Author</label>
+                        <input type="text" id="book-author"/>
+                        <br>  
+                        <label for="book-pages">Pages</label>
+                        <input type="number" id="book-pages"/>
+                        <br>  
+                        <label for="book-status">Read Status</label>
+                        <input type="checkbox" id="book-status"/>
+                        <br>  
+                        <button id="submit">Add Book</button>
+                    </form>
+                </dialog>
+            </div>
         </div>
-
-        <button id="add-book">Register New Book</button>
-
-        <div class="form-add form-toggle">
-            <form action = "#">
-                <label for="book-title">Book Title</label>
-                <input type="text" id="book-title"/>
-                <br>    
-                <label for="book-author">Author</label>
-                <input type="text" id="book-author"/>
-                <br>  
-                <label for="book-pages">Pages</label>
-                <input type="number" id="book-pages"/>
-                <br>  
-                <label for="book-status">Read Status</label>
-                <input type="checkbox" id="book-status"/>
-                <br>  
-                <button id="submit">Add Book</button>
-            </form>
-        </div>
-
-        <div>Total Books: 0</div>
 
 
         <script src="scripts.js"></script>
