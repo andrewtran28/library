@@ -85,16 +85,3 @@ form.addEventListener("submit", () => {
 });
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
