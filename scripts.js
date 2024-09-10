@@ -1,4 +1,5 @@
 const myLibrary = [];
+
 const form = document.querySelector("form");
 const btn_addBook = document.querySelector("#add-book");
 const btn_submit = document.querySelector("#submit")
@@ -17,6 +18,32 @@ function Book(title, author, pages, read) {
     }
 
     console.log(this.info());
+}
+
+function displayLibrary() {
+    let library = document.querySelector(".library-cont");
+
+    library.innerHTML = "";
+
+    for (let i = 0; i < myLibrary.length; i++) {
+        const book = myLibrary[i];
+        const card = document.createElement("div");
+        card.className = "book";
+      
+        card.innerHTML = `
+            <button class="remove">x</button>
+            <div class="title">${book.title}</div>
+            <div class="author">${book.author}</div>
+            <div class="page">Page Count: ${book.pages}</div>
+            <div>
+                Read Status: 
+                <input type="checkbox" id="read" name="read" ${book.read ? "checked" : "unchecked"}>
+            </div>
+        `;
+
+        library.appendChild(card);
+    }
+    
 }
 
 function addBookCard(title, author, pages, read) {
@@ -48,28 +75,31 @@ function addBookCard(title, author, pages, read) {
     bookRemove.textContent = "x";
 
     btn_remove.addEventListener("click", () => {
-        newBook.removeChild(card);
+        document.removeChild(card);
         console.log("Test");
     });
 
 }
 
 function addBookToLibrary(event) {
+    event.preventDefault();
+
     const title_input = document.querySelector("#book-title").value;
     const author_input = document.querySelector("#book-author").value;
     const pages_input = document.querySelector("#book-pages").value;
-    const read_input = document.querySelector("#book-status").value;
-    event.preventDefault();
+    const read_input = document.querySelector("#book-status").checked;
 
     let newBook = new Book(title_input, author_input, pages_input, read_input);
-    addBookCard(title_input, author_input, pages_input, read_input);
+
+    myLibrary.push(newBook);
+    displayLibrary();
+
     toggleForm.classList.toggle("form-toggle");
 }
 
 btn_addBook.addEventListener("click", () => {
+    form.reset();
     toggleForm.classList.toggle("form-toggle");
 });
 
 form.addEventListener("submit", addBookToLibrary);
-
-const hobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, 0);
