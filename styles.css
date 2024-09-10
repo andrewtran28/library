@@ -3,104 +3,143 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: lightslategray;
-    font-size: 1.5rem;
+    background-color: #ABDFF1;
+    font-size: 1.25rem;
+
 }
 
 .layout {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 4fr;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.header-cont {
+    background-color: #0C4A60;
+    color: #E1DDDB;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 3px 0px 0px 0px #000000;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+.total{
+    margin: 10px;
 }
 
 .library-cont {
-    border: 1px solid blue;
     display: grid;
-    width: clamp(400px, 80%, 2000px);
-    grid-template-columns: repeat(auto-fill, clamp(200px, 25%, 500px));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, clamp(500px, 33%, 50%));
+    grid-template-rows: repeat(auto-fill, 250px);
     margin: 10px;
-
+    gap: 10px;
 }
 
 .book {
-    background-color: rgb(248, 115, 115);
-    border: 1px solid red;
+    background-color: #EF6C33;
+    border: 2px solid #0C4A60;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
     position: relative;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 3px 3px 0px 0px #0C4A60;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.author {
+    font-size: 1.75rem;
+    color: rgb(49, 49, 49);
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
 dialog {
-    /* width: clamp(50%, 600px, 600px); */
-    /* height: clamp(20%, 300px, 300px); */
     position: absolute;
-    height: 400px;
+    height: 500px;
     width: 350px;
-    top: 25%;
-    left: 50%;
-    margin-top: -200px;
-    margin-left: -175px;
+    bottom: 20vh;
     border-radius: 10px;
+    background-color: #E1DDDB;
     z-index: 1;
+    box-shadow: 3px 3px 0px 0px #000000;
 }
 
-.form-add {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    
-    /* color: #67615c;
-    z-index: 1;
-    position: absolute;
-    left: 30%;
-    height: 650px;
-    width: 30rem;
-    background-color: rgb(255, 255, 255);
-    padding-left: 3rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 10px;
-    transition: all 0.5s ease-in; */
+legend {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
-input,
-.close {
-    font-size: 1.5rem;
+input {
+    font-size: 1.25rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
+    margin-top: 30px;
+}
+
+input[type=checkbox] {
+    margin: 10px 10px;
+    accent-color: #0C4A60;
+    transform: scale(2);
+}
+
+dialog input[type=checkbox] {
+    margin: 20px 5px;
+    accent-color: #0C4A60;
+    transform: scale(3);
+    width: 30px;
 }
 
 button {
-    font-size: 1rem;
-    padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+    background-color: #EF6C33;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #b55025;
+}
+
+.close,
+.remove {
+    position: absolute;
+    font-size: 1.25rem;
+    border: none;
+    margin: 5px;
+    line-height: 1rem;
 }
 
 .close {
-    position: absolute;
     top: 5px;
     right: 5px;
-    background: orangered;
-    border: 2px solid orangered;
-    border-radius: 10px;
+    background: #E1DDDB;
+    margin: 0px;
+}
+
+.close:hover {
+    background-color: #a29f9d;
 }
 
 .remove {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: orangered;
-    border: 2px solid orangered;
-    border-radius: 10px;
-}
-
-.remove:hover {
-    background-color: aqua;
+    top: 0;
+    right: 0;
 }

@@ -1,12 +1,10 @@
 const myLibrary = [];
-var totalBooks = myLibrary.length;
 const total = document.querySelector(".total")
 const dialog = document.querySelector("dialog");
-const btn_close = document.querySelector("dialog button")
 const form = document.querySelector("form");
+const btn_close = document.querySelector("dialog button")
 const btn_addBook = document.querySelector("#add-book");
 const btn_remove = document.querySelector(".remove");
-// const btn_submit = document.querySelector("#submit")
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -14,11 +12,11 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this. read = read;
 
+    //This function is only for console logging and is not necessary.
     this.info = function() {
         read ? read = "has been read" : read = "has not been read yet";
         return (title + " by " + author + " (" + pages + " pages) " + read + ".");
     }
-
     console.log(this.info());
 }
 
@@ -40,10 +38,10 @@ function displayLibrary() {
         card.className = "book";
       
         card.innerHTML = `
-            <button class="remove" onClick="removeBook(${i})">Close</button>
+            <button class="remove" onClick="removeBook(${i})">×</button>
             <div class="title">${book.title}</div>
             <div class="author">${book.author}</div>
-            <div class="page">Page Count: ${book.pages}</div>
+            <div>Page Count: ${book.pages}</div>
             <div>
                 Read Status: 
                 <input type="checkbox" id="read" name="read" ${book.read ? "checked" : "unchecked"}>
@@ -64,7 +62,6 @@ function removeBook(index) {
 btn_addBook.addEventListener("click", () => {
     dialog.showModal();
     form.reset();
-    // toggleForm.classList.toggle("form-toggle");
 });
 
 btn_close.addEventListener("click", () => {
@@ -72,8 +69,7 @@ btn_close.addEventListener("click", () => {
     dialog.close();
 });
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+form.addEventListener("submit", () => {
     const title_input = document.querySelector("#book-title").value;
     const author_input = document.querySelector("#book-author").value;
     const pages_input = document.querySelector("#book-pages").value;
@@ -88,11 +84,17 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-addBookToLibrary("Joe", "Mama", 142, 1);
-addBookToLibrary("The Hobbit", "Joe Mama", 1422, 0);
-addBookToLibrary("Joe", "Mama", 142, 1);
-addBookToLibrary("The Hobbit", "Joe Mama", 1422, 0);
-addBookToLibrary("Joe", "Mama", 142, 1);
-addBookToLibrary("The Hobbit", "Joe Mama", 1422, 0);
-
-console.log(totalBooks);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, 1);
