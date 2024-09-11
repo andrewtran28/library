@@ -1,11 +1,10 @@
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    background-color: #ABDFF1;
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #ABDFF1;
-    font-size: 1.25rem;
-
 }
 
 .layout {
@@ -17,19 +16,22 @@ body {
 }
 
 .header-cont {
-    background-color: #0C4A60;
-    color: #E1DDDB;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 0px 0px 0px #000000;
     position: sticky;
     height: 100vh;
     top: 0;
+    background-color: #0C4A60;
+    color: #E1DDDB;
+    box-shadow: 3px 0px 0px 0px #000000;
 }
 
-h1 {
+h1,
+legend,
+.title {
     font-weight: 600;
+    font-size: 2rem;
 }
 
 .total{
@@ -54,43 +56,38 @@ h1 {
 }
 
 .book {
-    background-color: #EF6C33;
-    border: 2px solid #0C4A60;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: #EF6C33;
+    box-shadow: 3px 3px 0px 0px #0C4A60;
+    border: 2px solid #0C4A60;
+    border-radius: 10px;
     margin: 10px;
     padding: 20px;
-    box-shadow: 3px 3px 0px 0px #0C4A60;
-}
-
-.title {
-    font-weight: 600;
-    font-size: 2rem;
+    line-height: 2rem;
 }
 
 .author {
     font-size: 1.75rem;
-    color: rgb(49, 49, 49);
     font-style: italic;
+    color: rgb(49, 49, 49);
     margin-bottom: 10px;
 }
 
 dialog {
     position: absolute;
-    height: 500px;
+    height: 520px;
     width: 350px;
     bottom: 20vh;
+    z-index: 1;
     border-radius: 10px;
     background-color: #E1DDDB;
-    z-index: 1;
     box-shadow: 3px 3px 0px 0px #000000;
 }
 
 legend {
-    font-size: 2.5rem;
-    font-weight: 600;
+    text-align: center;
 }
 
 input {
@@ -100,7 +97,7 @@ input {
 form {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 input[type=checkbox] {
