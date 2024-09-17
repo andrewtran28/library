@@ -6,22 +6,23 @@ const btn_close = document.querySelector("dialog button")
 const btn_addBook = document.querySelector("#add-book");
 const btn_remove = document.querySelector(".remove");
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this. read = read;
-
-    //This function is only for console logging and is not necessary.
-    this.info = function() {
-        read ? read = "has been read" : read = "has not been read yet";
-        return (title + " by " + author + " (" + pages + " pages) " + read + ".");
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this. read = read;
     }
-    console.log(this.info());
+
+    info() {
+        this.read ? this.read = "has been read" : this.read = "has not been read yet";
+        console.log(this.title + " by " + this.author + " (" + this.pages + " pages) " + this.read + ".");
+    }
 }
 
 function addBookToLibrary(title, author, pages, read) {
     let newBook = new Book(title, author, pages, read);
+    newBook.info();
 
     myLibrary.push(newBook);
     displayLibrary();
